@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="xmlstylesheet.xsl"?>
+
+<!DOCTYPE carType [
+<!ELEMENT carType (car+)>
+	<!ELEMENT car (carModel, description, cost, make, safetyRating, extras+, couponCode, information+, imageUrl, manufactererPromo)>
+		<!ELEMENT carModel (#PCDATA)>
+		<!ELEMENT description (#PCDATA)>
+		<!ELEMENT cost (#PCDATA)>
+		<!ELEMENT make (#PCDATA)>
+		<!ATTLIST make electric CDATA "No">
+		<!ELEMENT safetyRating (#PCDATA)>
+		<!ELEMENT extras (weatherCoat|(weatherCoat, leatherInterior)|(weatherCoat, leatherInterior, backSeatCdPlayer))>
+			<!ELEMENT weatherCoat (#PCDATA)>
+			<!ELEMENT leatherInterior (#PCDATA)>
+			<!ELEMENT backSeatCdPlayer (#PCDATA)>
+		<!ELEMENT couponCode (#PCDATA)*>
+		<!ELEMENT information (reccommendEnvironment|(reccommendEnvironment, passengerLimit))*>
+			<!ELEMENT reccommendEnvironment (#PCDATA)*>
+			<!ELEMENT passengerLimit (#PCDATA)*>
+		<!ELEMENT imageUrl (#PCDATA)>
+		<!ELEMENT manufactererPromo (#PCDATA)>
+]>
+
+<carType>
+	<car>
+		<carModel>NULL (0)</carModel>
+		<description>NULL (0)</description>
+		<cost>NULL (0)</cost>
+		<make electric = "No" >NULL (0)</make>
+		<safetyRating>NULL (0)</safetyRating>
+		<extras>
+			<weatherCoat>NULL (0)</weatherCoat>
+			<leatherInterior>NULL (0)</leatherInterior>
+			<backSeatCdPlayer>NULL (0)</backSeatCdPlayer>
+		</extras>
+		<couponCode></couponCode>
+		<information>
+			<reccommendEnvironment></reccommendEnvironment>
+			<passengerLimit></passengerLimit>
+		</information>
+		<imageUrl>NULL (0)</imageUrl>
+		<manufactererPromo>NULL (0)</manufactererPromo>
+	</car>
+</carType>

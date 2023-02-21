@@ -1,0 +1,195 @@
+h1 {
+	padding-top: 1%;
+	color: black;
+	text-align: center;
+	text-transform: uppercase;
+  
+}
+
+h2 {
+	text-transform: uppercase;
+	
+}
+
+hr {
+	width: 85%;
+	text-align: center; 
+	color:grey;
+}
+
+body {
+	font: 100% Lucida Sans, Verdana;
+
+	padding-left: 10%;
+	padding-right: 10%;
+	line-height: 18px;
+	font-size: 14px;
+	background-color: grey;
+}
+
+#paragraphs {
+
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-bottom: 2%;	
+	float: center;
+}
+
+#menu {
+	padding-top: 5px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+#introtext {
+	font-size: 18px;
+	line-height: 22px;
+}
+
+#quote {
+	width: 85%;
+	font: 100% Monospace, Courier New;
+	float: center;
+}
+
+.container {
+	background-color: white;
+	padding-bottom: 2%;
+}
+
+img {
+	width: 500px;
+	padding-bottom: 3%;
+	float: center;
+}
+
+a {
+	transition: all .2s ease-in-out;
+}
+
+a:link {
+	color: hotpink;
+}
+
+
+a:visited {
+	color: green;
+}
+
+
+a:hover {
+
+	transform: scale(2);
+	font-size: 19px;
+}
+
+a:active {
+	color: blue;
+}
+
+.copyright {
+	float: left;
+	background-color: #545454;
+	width: 100%;
+	padding-top: 1%;
+	
+}
+
+.copyright p {
+	color: georgian;	
+}
+
+.form-container {
+	
+	width: 30%;
+
+	
+	border-radius: 4px;
+	overflow: hidden;
+
+	margin-left: 35%;
+	margin-right: 35%;
+
+
+	background-color: #C1C1C1;
+}
+
+#header {
+	background-color: grey;
+	padding-left: 5%;
+	padding-right: 5%;
+	
+	padding-top: 2%;
+	padding-bottom: 2%;
+
+}
+
+#form {
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 2%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+#form-level {
+	margin-bottom: 1%;
+	padding-bottom: 1%;
+	position: relative;
+}
+
+#form-level lable {
+	display: inline-block;
+	margin-bottom: 2%;
+	
+}
+
+#form-level input {
+	display: block;
+	margin-bottom: 2%;
+	
+}
+
+#form-level small {
+	position: relative;
+	margin-bottom: 2%;
+	color: red;
+	visibility: hidden;
+}
+
+
+#checkbox {
+	margin-left: 15%;
+	
+}
+
+#radiobuttons input {
+	display: inline-block;
+}
+
+#radiobuttons {
+	margin-left: 15%;
+}
+
+
+
+button {
+	padding: 2% 3%;
+	width: 40%;
+	border-radius: 1%;
+	border: 1% solid;
+	align-items: center;
+	cursor: pointer;
+}
+
+input {
+	width: 97%;
+}
+
+textarea {
+	width: 97%;
+}
+
+

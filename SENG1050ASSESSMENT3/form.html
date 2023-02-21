@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" /css" href="style.css" />
+
+<title>Jim's Cars - #1 dealer in the 5th quadrant. Also cars.</title>	
+
+
+
+<body>
+	<div class="container">
+	
+	
+		<h1>Jim's Cars</h1>
+		
+		<hr />
+
+		<div id="menu">
+			<a href="index.html">Home</a> -
+			<a href="convertable.xml">Convertibles</a> -
+			<a href="SUV.xml">SUVs</a> - 
+			<a href="form.html">Form</a> -
+			<a href="Privacy Policy.html">Privacy Policy</a> -
+			<a href="Terms and Conditions.html">Terms</a> -
+		</div>
+		
+		<hr />
+		
+		<div id="paragraphs">
+			<h2><u>List For Sale</u></h2>
+			
+			<div id="introtext">
+			<p>You can use the form below to submit you own car for sale on Jim's Cars galaxy wide network. With the click a few buttons(and many keypresses) you can be well on your way to a much easier selling experience, one that we think any true blooded car enthiusist is sick of.</p>	
+			</div>
+			
+		</div>
+		
+		<hr />
+		
+		<div class="form-container">
+		
+			<div id="header">
+				<h1>Car Form</h1>
+			</div>
+			
+			<div id="form">
+				<form action="http://jkorpela.fi/cgi-bin/echo.cgi" method="post">
+					<div id="form-level">
+						<label for="name">Full Name: </label>
+						<input name="name" id="name">
+						<small>Invalid Input</small>
+					</div>
+					<div id="form-level">
+						<label for="email">Email Address: </label>
+						<input name="email" id="email">
+						<small>Invalid Input</small>
+					</div>
+					<div id="form-level">
+						<label for="phone">Phone Number: </label>
+						<input name="phone" id="phone">
+						<small>Invalid Input</small>
+					</div>
+					<div id="form-level">
+						<label for="previousCars">Previous Car Num? </label>
+						<input name="previousCars" id="previousCars">
+						<small>Invalid Input</small>
+					</div>
+					<div id="form-level">
+						<label for="model">Model: </label>
+						<div id="dropbox">
+							<select name = "model" id = "model">
+								<option value = "SUV"> SUV </option>
+								<option value = "convertible"> Convertible </option>
+							</select>
+						</div>
+						<small>Invalid Input</small>
+					</div>
+					
+					<div id="form-level">
+						<label>Description:</label>
+						<div id="textbox">
+							<textarea name="description" rows="10" cols="30" id="Box">describe your car in detail
+							</textarea>
+						</div>
+						<small>Invalid Input</small>
+					</div>
+					
+					<div id="form-level">
+						<label>Repair History</label>
+						<div id="textbox">
+							<textarea name="description" rows="10" cols="30" id="repair">Any parts that have been repaired or may require repair. Whether official parts were used.
+							</textarea>
+						</div>
+						<small>Invalid Input</small>
+					</div>
+					
+					<div id="form-level">
+						<label>Have you bought a car in the past 5 years?</label>
+						<div id="radiobuttons">
+								<label for="yes">Yes</label><br>
+								<input type="radio" id="yes" name="binary" value="true" checked="checked">
+						</div>
+						<div id="radiobuttons">
+								<label for="no">No</label><br>
+								<input type="radio" id="no" name="binary" value="false">
+						</div>		
+						<small>Invalid Input</small>
+					</div>
+
+					<div id="form-level">
+						<label>Extras: </label>					
+						<div id="checkbox">
+							<label for="weatherCoat">Weather Coating</label><br>
+							<input type="checkbox" id="weatherCoat" name="weatherCoat" value="weatherCoat">	
+							<label for="leatherInterior">Leather Interior</label><br>
+							<input type="checkbox" id="leatherInterior" name="leatherInterior" value="leatherInterior">
+							<label for="backSeatCdPlayer">Back Seat CD Player</label>
+							<input type="checkbox" id="backSeatCdPlayer" name="backSeatCdPlayer" value="backSeatCdPlayer">
+						</div>
+						<small>Invalid Input</small>
+					</div>
+					
+					<div id="form-level">
+						<label for="satisfaction">Would you consider buying another? </label>
+						<div id="dropbox">
+							<select name = "satisfaction" id="satisfaction">
+								<option value = "Yes"> Yes </option>
+								<option value = "No"> No </option>
+								<option value = "Maybe"> Maybe </option>
+							</select>
+						</div>
+						<small>Invalid Input</small>
+					</div>
+						
+					<!--
+					
+									-->
+					<div id="form-level">
+					<button>Submit</button>
+					<button type="reset">Clear</button>
+					</div>
+					
+				</form>
+				
+				<script type="text/javascript">
+						let name = document.getElementById('name');
+						let email = document.getElementById('email');
+						let phone = document.getElementById('phone');
+						let previousCars = document.getElementById('previousCars');
+						let Box = document.getElementById('Box');
+						let repair = document.getElementById('repair');
+						let yes = document.getElementById('yes');
+						let no = document.getElementById('no');
+						let weather = document.getElementById('weatherCoat');
+						let leather = document.getElementById('leatherInterior');
+						let backseat = document.getElementById('backSeatCdPlayer');
+						let satisfaction = document.getElementById('satisfaction');
+						
+						var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+						
+						form.addEventListener('submit', e => {
+
+							checkInputs();
+						});
+							
+						
+						function checkInputs() {
+							let nameValue = name.value.trim();
+							let emailValue = email.value.trim();
+							let phoneValue = phone.value.trim();
+							let previousCarsValue = previousCars.value.trim();
+							let BoxValue = Box.value.trim();
+							let repairValue = repair.value.trim();
+							let yesValue = yes.value.trim();
+							let noValue = no.value.trim();
+							let weatherValue = weather.value.trim();
+							let leatherValue = leather.value.trim();
+							let backseatValue = backseat.value.trim();
+							let satisfactionValue = satisfaction.value.trim();
+							
+							if (nameValue == '') {
+								error(name, "Name cannot be empty.");
+							}
+							
+							if (emailValue == '') {
+								error(email, "Email cannot be empty.");
+							} else if (!emailValue.match(mailFormat)) {
+								error(email, "Email is invalid.");
+							}
+							
+							if (isNaN(phoneValue)) {
+								error(phone, "Please only use numbers.");
+							} else if (phoneValue == '') {
+								error(phone, "Phone cannot be empty.");
+							}
+							
+							if (isNaN(previousCarsValue)) {
+								error(previousCars, "Please only use numbers.");
+							} else if (previousCarsValue == '') {
+								error(previousCars, 'How many previous cars have you had.')
+							}
+							
+							if (BoxValue = 'describe your car in detail') {
+								error(Box, 'Please describe your car');
+							}
+							
+							if (repairValue = 'Any parts that have been repaired or may require repair. Whether official parts were used.') {
+								error(repairValue, 'Please input info');
+							}
+							
+							if (yesValue == false) {
+								if (noValue == false) {
+									let inherit = yes;
+									let parent = inherit.parentElement;
+									let parent2 = parent.parentElement;
+									let invalid = parent2.querySelector("small");
+									invalid.style.visibility = "visible";
+									invalid.innerText = message;
+								}
+							}
+							
+						}
+							
+							
+						
+						function error(inherit, message) {
+							let parent = inherit.parentElement;
+							let invalid = parent.querySelector("small");
+							invalid.style.visibility = "visible";
+							invalid.innerText = message;
+						}
+						
+					</script>
+			</div>
+		
+		</div>
+	</div>
+	
+</body>
+
+
+
+<div class="copyright">
+	<p>this was a website designed by a student at <a href="http://www.newcastle.edu.au">newcastle university</a></p>
+	<p>Copyright 1822-2456 by Adil Nawaz Malik. All Rights Reserved. Contact email: someEmail@something.com Address: SOMEADDRESS</p>
+</div>
+</html>
+
+

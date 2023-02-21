@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="xmlstylesheet.xsl" type="text/xsl"?>
+<!DOCTYPE carType [
+<!ELEMENT carType (car+)>
+	<!ELEMENT car (carModel, description, cost, make, safetyRating, extras+, couponCode, information+, imageUrl, manufactererPromo)>
+		<!ELEMENT carModel (#PCDATA)>
+		<!ELEMENT description (#PCDATA)>
+		<!ELEMENT cost (#PCDATA)>
+		<!ELEMENT make (#PCDATA)>
+		<!ATTLIST make electric CDATA "No">
+		<!ELEMENT safetyRating (#PCDATA)>
+		<!ELEMENT extras (weatherCoat|(weatherCoat, leatherInterior)|(weatherCoat, leatherInterior, backSeatCdPlayer))>
+			<!ELEMENT weatherCoat (#PCDATA)>
+			<!ELEMENT leatherInterior (#PCDATA)>
+			<!ELEMENT backSeatCdPlayer (#PCDATA)>
+		<!ELEMENT couponCode (#PCDATA)*>
+		<!ELEMENT information (reccommendEnvironment|(reccommendEnvironment, passengerLimit))*>
+			<!ELEMENT reccommendEnvironment (#PCDATA)*>
+			<!ELEMENT passengerLimit (#PCDATA)*>
+		<!ELEMENT imageUrl (#PCDATA)>
+		<!ELEMENT manufactererPromo (#PCDATA)>
+]>
+
+<carType>
+	<car>
+		<carModel>MX-5 1.5 [132] Sport Nav+ 2dr</carModel>
+		<description>The Mazda MX-5 isn’t the world’s best-selling roadster by accident: its recipe of simple mechanicals and accessible fun mean it’s a car with cheap running costs and broad appeal.</description>
+		<cost>29,310</cost>
+		<make electric = "No" >Mazda</make>
+		<safetyRating>3</safetyRating>
+		<extras>
+			<weatherCoat>optional</weatherCoat>
+			<leatherInterior>none</leatherInterior>
+			<backSeatCdPlayer>none</backSeatCdPlayer>
+		</extras>
+		<couponCode></couponCode>
+		<information>
+			<reccommendEnvironment>forestMoonOfEndor</reccommendEnvironment>
+			<passengerLimit>2</passengerLimit>
+		</information>
+		<imageUrl>images/2019mx-5_soulredcrystal-14.jpg</imageUrl>
+		<manufactererPromo>https://www.mazda.com.au/cars/mx-5</manufactererPromo>
+	</car>
+	
+	<car>
+		<carModel>718 Boxster</carModel>
+		<description>What we have here is – still – the best roadster on sale. But rather than look down on its rivals as a dominant, reigning leader, it’s kicking them away as they snap aggressively at its heels. The chassis really is one of the very best in the business, and until the lovely little lightweight Alpine, there was nothing to touch the Boxster and Cayman pairing when it came to a sports car offering a wonderfully judged mixture of everyday ability and otherworldly handling.</description>
+		<cost>50,695</cost>
+		<make electric = "No" >Porsche</make>
+		<safetyRating>4</safetyRating>
+		<extras>
+			<weatherCoat>included</weatherCoat>
+			<leatherInterior>included</leatherInterior>
+			<backSeatCdPlayer>none</backSeatCdPlayer>
+		</extras>
+		<couponCode>foting2</couponCode>
+		<information>
+			<reccommendEnvironment>4thdimensionalRoad</reccommendEnvironment>
+			<passengerLimit>2</passengerLimit>
+		</information>
+		<imageUrl>images/PCGB20_0937_fine.jpg</imageUrl>
+		<manufactererPromo>https://www.porsche.com/australia/models/718/718-models/718-boxster/</manufactererPromo>
+	</car>
+	
+	<car>
+		<carModel>4 Series 435d xDrive M Sport 2dr Auto</carModel>
+		<description>Just as the 4 Series Coupe is the best mid-sized sporty-lux coupe, the 4 Series Convertible is a class-leading drop-top. It hits every base: it’s refined top up or down, the engines are fabulous, it’s spacious and reasonably practical, well-finished and can be festooned with all the gadgets and assists you’d expect. </description>
+		<cost>55,200</cost>
+		<make electric = "No" >BMW</make>
+		<safetyRating>4</safetyRating>
+		<extras>
+			<weatherCoat>yes</weatherCoat>
+			<leatherInterior>yes</leatherInterior>
+			<backSeatCdPlayer>no</backSeatCdPlayer>
+		</extras>
+		<couponCode></couponCode>
+		<information>
+			<reccommendEnvironment>mars</reccommendEnvironment>
+			<passengerLimit>4</passengerLimit>
+		</information>
+		<imageUrl>images/P90414424_highRes_bmw-m440i-xdrive-con.jpg</imageUrl>
+		<manufactererPromo>https://www.bmw.com/en-au/models/4-series/convertible/showroom/4-series-convertible.html</manufactererPromo>
+	</car>
+</carType>

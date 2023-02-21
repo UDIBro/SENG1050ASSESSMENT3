@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="xmlstylesheet.xsl" type="text/xsl"?>
+<!DOCTYPE carType [
+<!ELEMENT carType (car+)>
+	<!ELEMENT car (carModel, description, cost, make, safetyRating, extras+, couponCode, information+, imageUrl, manufactererPromo)+>
+		<!ELEMENT carModel (#PCDATA)>
+		<!ELEMENT description (#PCDATA)>
+		<!ELEMENT cost (#PCDATA)>
+		<!ELEMENT make (#PCDATA)>
+		<!ATTLIST make electric CDATA "No">
+		<!ELEMENT safetyRating (#PCDATA)>
+		<!ELEMENT extras (weatherCoat|(weatherCoat, leatherInterior)|(weatherCoat, leatherInterior, backSeatCdPlayer))>
+			<!ELEMENT weatherCoat (#PCDATA)>
+			<!ELEMENT leatherInterior (#PCDATA)>
+			<!ELEMENT backSeatCdPlayer (#PCDATA)>
+		<!ELEMENT couponCode (#PCDATA)*>
+		<!ELEMENT information (reccommendEnvironment|(reccommendEnvironment, passengerLimit))*>
+			<!ELEMENT reccommendEnvironment (#PCDATA)*>
+			<!ELEMENT passengerLimit (#PCDATA)*>
+		<!ELEMENT imageUrl (#PCDATA)>
+		<!ELEMENT manufactererPromo (#PCDATA)>
+]>
+
+<carType>
+	<car>
+		<carModel>Kona 1.0 TGDi 48V MHEV Ultimate 5dr</carModel>
+		<description>If you like the way the Kona looks, then by all means go ahead. People buy on style more than anything else in this segment, so it’s almost incidental that the Kona is a reasonably well-sorted thing underneath. It doesn’t excel in any one area, but it doesn’t insult either.</description>
+		<cost>40,895</cost>
+		<make electric = "Yes" >Hyundai</make>
+		<safetyRating>4</safetyRating>
+		<extras>
+			<weatherCoat>Included</weatherCoat>
+			<leatherInterior>Optional</leatherInterior>
+			<backSeatCdPlayer>Dual Screen</backSeatCdPlayer>
+		</extras>
+		<couponCode>HyunDamn</couponCode>
+		<information>
+			<reccommendEnvironment>Temperate Towns</reccommendEnvironment>
+			<passengerLimit>5</passengerLimit>
+		</information>
+		<imageUrl>images/hyundai Kona electric.png</imageUrl>
+		<manufactererPromo>https://www.hyundai.com/au/en/cars/suvs/kona/kona-electric</manufactererPromo>
+	</car>
+	
+	<car>
+		<carModel>X5 xDrive30d M Sport 5dr Auto</carModel>
+		<description>BMW has got to know SUV buyers well, and has built a really solid entry. The basics are right. It's competent, and you don't have to spend a pile on options to get a desirable spec.</description>
+		<cost>63,305</cost>
+		<make electric = "No" >BMW</make>
+		<safetyRating>4</safetyRating>
+		<extras>
+			<weatherCoat>Optional</weatherCoat>
+			<leatherInterior>Included</leatherInterior>
+			<backSeatCdPlayer>Optional</backSeatCdPlayer>
+		</extras>
+		<couponCode></couponCode>
+		<information>
+			<reccommendEnvironment>Normal terrain and some offroading</reccommendEnvironment>
+			<passengerLimit>7</passengerLimit>
+		</information>
+		<imageUrl>images/BMW_X5_front34_dynamic.jpg</imageUrl>
+		<manufactererPromo>https://www.bmw.com/en-au/models/x-series/x5-suv/showroom/x5.html</manufactererPromo>
+	</car>
+	
+	<car>
+		<carModel>RS6 RS 6 TFSI Quattro Vorsprung 5dr Tiptronic</carModel>
+		<description>There’s something a damn sight more palatable about a performance estate than an SUV and the Audi RS6 proves this. In the current political and social climate, does the world really need a 600bhp family wagon? Probably not. But boy are we glad we have one as it’s one of Audi Sport’s best executions to date. Previous thuggish edges have been sanded down to make way for a more intelligent and useable package that'll appeal to more people.</description>
+		<cost>107,060</cost>
+		<make electric = "No" >Audi</make>
+		<safetyRating>4</safetyRating>
+		<extras>
+			<weatherCoat>included</weatherCoat>
+			<leatherInterior>included</leatherInterior>
+			<backSeatCdPlayer>optional</backSeatCdPlayer>
+		</extras>
+		<couponCode>SUPAudi</couponCode>
+		<information>
+			<reccommendEnvironment>any paved environment</reccommendEnvironment>
+			<passengerLimit>4</passengerLimit>
+		</information>
+		<imageUrl>images/ars6064.jpg</imageUrl>
+		<manufactererPromo>https://www.audi.com.au/au/web/en/models/a6/rs-6-avant.html</manufactererPromo>
+	</car>
+</carType>
